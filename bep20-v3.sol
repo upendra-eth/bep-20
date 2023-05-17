@@ -219,13 +219,7 @@ contract BEP20 is ERC20, ERC20Burnable, Pausable, Ownable , Freezable , TrustedC
         super._beforeTokenTransfer(from, to, amount);
     }
 
-        function transferAnyBEP20Token(address _tokenAddress ,address to, uint256 _value)
-        public
-        onlyOwner
-        returns (bool)
-    {
-        return IERC20(_tokenAddress).transfer(to, _value);
-    }
+   
 
      function bulkTransfer(address[] memory recipients, uint256[] memory amounts)
         public
@@ -249,4 +243,4 @@ contract BEP20 is ERC20, ERC20Burnable, Pausable, Ownable , Freezable , TrustedC
         }
         return true;
     }
-}
+} 
